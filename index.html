@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in JavaScript, Interactive Elements, and Form Validation</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- interactive ui elements (toggle button) -->
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    <hr>
+    <!-- carousel => image slideshow  -->
+    <div id="carousel">
+        <img id="carouselImage" src="images/image-1.jpg" alt="carousel image" />
+        <hr>
+        <button onclick="previousImage()">Previous</button>
+        <button onclick="nextImage()">Next</button> 
+    </div>
+    <p>This text color will change in dark mode.</p>
+    <!-- 1. inline event handlers -->
+    <input type="text"
+    onfocus="this.style.background='lightblue';" 
+    onblur="this.style.background='';" 
+    placeholder="Focus to change color">
+
+    <p 
+    onmouseover="this.style.color='red'; this.innerText='Mouse has passed over me!';"
+    >This text will change on mouse over.</p>
+
+    <input type="text" id="myInput" placeholder="Type something..." />
+
+    <textarea id="myTextArea" rows="4" cols="50" placeholder="Type your message here..."></textarea>
+
+    <hr>
+    <!-- form validation -->
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <span id="usernameError" class="error"></span>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
